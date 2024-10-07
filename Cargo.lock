@@ -454,8 +454,6 @@ dependencies = [
 [[package]]
 name = "terra-plr"
 version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e0c866a4fef731e71819a7445fec4cb39b51bc93607ec51564eaf506d970fcb0"
 dependencies = [
  "aes",
  "bounded-integer",

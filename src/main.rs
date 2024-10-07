@@ -451,13 +451,12 @@ fn main() -> Result<()> {
 
 
     let mut outfile = File::create(format!("{name}.plr", name=args.name))?;
-    player.write_player_unencrypted(&mut outfile, *SUPPORTED_VERSIONS.end())?;
+    player.write_player(&mut outfile, 279)?;
     outfile.flush()?;
 
-
-    let mut written_player = File::open(format!("{name}.plr", name=args.name))?;
-    let player = Player::read_player_unencrypted(&mut written_player)?;
-    dbg!(&player); // this should be the same as we thought we just made
+    // let mut written_player = File::open(format!("{name}.plr", name=args.name))?;
+    // let player = Player::read_player_unencrypted(&mut written_player)?;
+    // dbg!(&player); // this should be the same as we thought we just made
 
     Ok(())
 }
